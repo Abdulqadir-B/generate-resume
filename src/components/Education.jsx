@@ -4,10 +4,10 @@ export const Education = ({ education, setEducation }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (event) => {
-    setEducation({
-      ...education,
+    setEducation((currentEducation) => ({
+      ...currentEducation,
       [event.target.name]: event.target.value,
-    });
+    }));
   };
 
   const handleSubmit = (event) => {

@@ -5,11 +5,11 @@ export const Info = ({ info, setInfo }) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleChange = (event) => {
-        setInfo({
-            ...info,
+        setInfo((currentInfo) => ({
+            ...currentInfo,
             // The input name selects the state key to update.
             [event.target.name]: event.target.value,
-        });
+        }));
     };
 
     const handleSubmit = (e) => {

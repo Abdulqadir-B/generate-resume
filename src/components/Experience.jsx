@@ -4,10 +4,10 @@ export const Experience = ({ experience, setExperience }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (event) => {
-    setExperience({
-      ...experience,
+    setExperience((currentExperience) => ({
+      ...currentExperience,
       [event.target.name]: event.target.value,
-    });
+    }));
   };
 
   const handleSubmit = (event) => {
