@@ -1,17 +1,8 @@
-import { Info } from "./components/Info"
-import { Education } from "./components/Education"
-import { Experience } from "./components/Experience"
-
+import { Resume } from "./components/Resume"
 
 function App() {
-  
-
   return (
-    <>
-      <Info/>
-      <Education />
-      <Experience />
-    </>
+    <Resume />
   )
 }
 
