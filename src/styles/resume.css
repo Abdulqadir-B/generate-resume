@@ -1,109 +1,144 @@
 .resume-app {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 24px 20px 32px;
+}
+
+.resume-app > h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .resume-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
-  gap: 32px;
+  grid-template-columns: minmax(0, 390px) minmax(0, 1fr);
+  gap: 24px;
   align-items: start;
 }
 
 .editor-panel {
   display: grid;
-  gap: 24px;
+  gap: 10px;
 }
 
 .form-section {
-  padding: 20px;
-  border: 1px solid #d9d9d9;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
   text-align: left;
+}
+
+.form-section h2 {
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .resume-form {
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .resume-form input,
 .resume-form textarea {
   width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  border: 1px solid #bdbdbd;
-  border-radius: 4px;
+  padding: 8px 10px;
+  border: 1px solid #56616b;
+  border-radius: 5px;
+  color: var(--text);
+  background: #242a30;
   font: inherit;
 }
 
 .resume-form textarea {
-  min-height: 100px;
+  min-height: 52px;
   resize: vertical;
 }
 
 .resume-form input:focus,
 .resume-form textarea:focus {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #9db9f7;
   outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.resume-form label {
+  display: grid;
+  gap: 3px;
+  color: var(--text-muted);
+  font-size: 11px;
 }
 
 .resume-form button,
 .secondary-button {
   width: fit-content;
-  padding: 10px 16px;
-  border: 1px solid #1d4ed8;
-  border-radius: 4px;
+  margin-top: 2px;
+  padding: 7px 12px;
+  font-size: 12px;
+  border: 1px solid var(--accent-dark);
+  border-radius: 5px;
   color: white;
-  background: #2563eb;
+  background: var(--accent);
   font: inherit;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .resume-form button:hover,
 .secondary-button:hover {
-  background: #1d4ed8;
+  background: var(--accent-dark);
 }
 
 .secondary-button {
-  margin-top: 12px;
-}
-
-.resume-form label {
-  display: grid;
-  gap: 6px;
+  margin-top: 0;
 }
 
 .preview-panel {
-  min-height: 640px;
-  padding: 32px;
-  border: 1px solid #d9d9d9;
-  background: white;
+  aspect-ratio: 210 / 297;
+  min-height: 0;
+  padding: 32px 38px;
+  border: 1px solid #d2d8dc;
+  border-radius: 3px;
+  background: #eef2f5;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  color: #17212b;
   text-align: left;
+}
+
+.preview-panel h2,
+.preview-panel h3 {
+  color: #17212b;
 }
 
 .preview-label {
   margin: 0 0 24px;
-  color: #666;
-  font-size: 12px;
+  color: #56616b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .preview-header {
   padding-bottom: 20px;
-  border-bottom: 2px solid #222;
+  border-bottom: 2px solid #c9d2d8;
 }
 
 .preview-header h2 {
   margin: 0 0 8px;
   font-size: 30px;
+  font-weight: 700;
 }
 
 .preview-contact {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
-  color: #555;
+  gap: 4px 20px;
+  color: #475569;
+  font-size: 14px;
 }
 
 .preview-contact p,
@@ -112,19 +147,31 @@
 }
 
 .preview-section {
-  margin-top: 24px;
+  margin-top: 26px;
 }
 
 .preview-section h3 {
   margin: 0 0 10px;
   padding-bottom: 6px;
-  border-bottom: 1px solid #d9d9d9;
-  font-size: 16px;
+  border-bottom: 1px solid #c9d2d8;
+  color: #17212b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
 }
 
 @media (max-width: 800px) {
+  .resume-app {
+    padding: 28px 16px 48px;
+  }
+
   .resume-layout {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .preview-panel {
+    padding: 32px 24px;
   }
 }
