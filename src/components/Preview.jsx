@@ -1,6 +1,6 @@
 export const Preview = ({ info, education, experience }) => {
 	return (
-		<section>
+		<section className="preview-panel">
 			<h2>CV preview</h2>
 			<h3>{info.name || "Your name"}</h3>
 			<p>{info.email || "Your email"}</p>

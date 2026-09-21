@@ -3,6 +3,7 @@ import { Experience } from "./Experience";
 import { Info } from "./Info";
 import { Preview } from "./Preview";
 import { useState } from "react";
+import "../styles/Resume.css";
 
 export const Resume = () => {
   const [info, setInfo] = useState({
@@ -24,17 +25,21 @@ export const Resume = () => {
   });
 
   return (
-    <main>
+    <main className="resume-app">
       <h1>Resume Builder</h1>
-      <Info info={info} setInfo={setInfo} />
-      <Education education={education} setEducation={setEducation} />
-      <Experience experience={experience} setExperience={setExperience} />
+      <div className="resume-layout">
+        <div className="editor-panel">
+          <Info info={info} setInfo={setInfo} />
+          <Education education={education} setEducation={setEducation} />
+          <Experience experience={experience} setExperience={setExperience} />
+        </div>
 
-      <Preview
-        info={info}
-        education={education}
-        experience={experience}
-      />
+        <Preview
+          info={info}
+          education={education}
+          experience={experience}
+        />
+      </div>
     </main>
   );
 };

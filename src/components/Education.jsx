@@ -16,11 +16,11 @@ export const Education = ({ education, setEducation }) => {
   };
 
   return (
-    <section>
+    <section className="form-section">
       <h2>Educational experience</h2>
 
       {!isSubmitted && (
-        <form onSubmit={handleSubmit}>
+        <form className="resume-form" onSubmit={handleSubmit}>
           <input
             name="school"
             placeholder="School name"
@@ -44,7 +44,7 @@ export const Education = ({ education, setEducation }) => {
       )}
 
       {isSubmitted && (
-        <button type="button" onClick={() => setIsSubmitted(false)}>
+        <button className="secondary-button" type="button" onClick={() => setIsSubmitted(false)}>
           Edit
         </button>
       )}

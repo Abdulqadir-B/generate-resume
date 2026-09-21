@@ -16,11 +16,11 @@ export const Experience = ({ experience, setExperience }) => {
   };
 
   return (
-    <section>
+    <section className="form-section">
       <h2>Practical experience</h2>
 
       {!isSubmitted && (
-        <form onSubmit={handleSubmit}>
+        <form className="resume-form" onSubmit={handleSubmit}>
           <input
             name="company"
             placeholder="Company name"
@@ -62,7 +62,7 @@ export const Experience = ({ experience, setExperience }) => {
       )}
 
       {isSubmitted && (
-        <button type="button" onClick={() => setIsSubmitted(false)}>
+        <button className="secondary-button" type="button" onClick={() => setIsSubmitted(false)}>
           Edit
         </button>
       )}

@@ -1,4 +1,3 @@
-import "../styles/Info.css";
 import { useState } from "react";
 
 export const Info = ({ info, setInfo }) => {
@@ -17,11 +16,11 @@ export const Info = ({ info, setInfo }) => {
         setIsSubmitted(true);
     };
     return (
-        <section className="info-section">
+        <section className="form-section">
             <h2>General information</h2>
 
             {!isSubmitted && (
-            <form className="info-form" onSubmit={handleSubmit}>
+            <form className="resume-form" onSubmit={handleSubmit}>
                     <input
                         name="name"
                         type="text"
@@ -49,7 +48,7 @@ export const Info = ({ info, setInfo }) => {
 
             {isSubmitted && (
                 <button
-                    className="edit-button"
+                    className="secondary-button"
                     type="button"
                     onClick={() => setIsSubmitted(false)}
                 >
