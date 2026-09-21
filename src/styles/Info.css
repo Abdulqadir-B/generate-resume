@@ -1,0 +1,50 @@
+.info-section {
+	max-width: 480px;
+	margin: 32px auto;
+	padding: 24px;
+	border: 1px solid #d9d9d9;
+	text-align: left;
+}
+
+.info-form {
+	display: grid;
+	gap: 12px;
+}
+
+.info-form input {
+	padding: 10px;
+	border: 1px solid #bdbdbd;
+	border-radius: 4px;
+	font: inherit;
+}
+
+.info-form input:focus {
+	outline: 2px solid #2563eb;
+	outline-offset: 1px;
+}
+
+button {
+	padding: 10px 16px;
+	border: 1px solid #1d4ed8;
+	border-radius: 4px;
+	color: white;
+	background: #2563eb;
+	font: inherit;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #1d4ed8;
+}
+
+.info-preview {
+	margin-top: 24px;
+}
+
+.info-preview p {
+	margin: 8px 0;
+}
+
+.edit-button {
+	margin-top: 8px;
+}
