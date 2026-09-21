@@ -3,7 +3,6 @@ import { Experience } from "./Experience";
 import { Info } from "./Info";
 import { Preview } from "./Preview";
 import { useState } from "react";
-import "../styles/Resume.css";
 
 export const Resume = () => {
   const [info, setInfo] = useState({
