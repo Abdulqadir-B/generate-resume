@@ -1,17 +1,12 @@
 import "../styles/Info.css";
 import { useState } from "react";
 
-export const Info = () => {
-    const [data, setData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-    });
+export const Info = ({ info, setInfo }) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleChange = (event) => {
-        setData({
-            ...data,
+        setInfo({
+            ...info,
             // The input name selects the state key to update.
             [event.target.name]: event.target.value,
         });
@@ -31,32 +26,26 @@ export const Info = () => {
                         name="name"
                         type="text"
                         placeholder="Enter your name"
-                        value={data.name}
+                        value={info.name}
                         onChange={handleChange}
                     />
                     <input
                         name="email"
                         type="email"
                         placeholder="Enter your email"
-                        value={data.email}
+                        value={info.email}
                         onChange={handleChange}
                     />
                     <input
                         name="phone"
                         type="tel"
                         placeholder="Enter your phone number"
-                        value={data.phone}
+                        value={info.phone}
                         onChange={handleChange}
                     />
                     <button type="submit">Submit</button>
                 </form>
             )}
-
-            <div className="info-preview">
-                <p>{data.name || "Your name"}</p>
-                <p>{data.email || "Your email"}</p>
-                <p>{data.phone || "Your phone number"}</p>
-            </div>
 
             {isSubmitted && (
                 <button

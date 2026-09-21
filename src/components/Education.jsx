@@ -1,11 +1,6 @@
 import { useState } from "react";
 
-export const Education = () => {
-  const [education, setEducation] = useState({
-    school: "",
-    studyTitle: "",
-    date: "",
-  });
+export const Education = ({ education, setEducation }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (event) => {
@@ -47,12 +42,6 @@ export const Education = () => {
           <button type="submit">Submit</button>
         </form>
       )}
-
-      <div>
-        <p>{education.school || "Your school"}</p>
-        <p>{education.studyTitle || "Your title of study"}</p>
-        <p>{education.date || "Your study date"}</p>
-      </div>
 
       {isSubmitted && (
         <button type="button" onClick={() => setIsSubmitted(false)}>

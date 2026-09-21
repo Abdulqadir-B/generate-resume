@@ -1,13 +1,6 @@
 import { useState } from "react";
 
-export const Experience = () => {
-  const [experience, setExperience] = useState({
-    company: "",
-    position: "",
-    responsibilities: "",
-    dateFrom: "",
-    dateUntil: "",
-  });
+export const Experience = ({ experience, setExperience }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (event) => {
@@ -67,16 +60,6 @@ export const Experience = () => {
           <button type="submit">Submit</button>
         </form>
       )}
-
-      <div>
-        <p>{experience.company || "Your company"}</p>
-        <p>{experience.position || "Your position"}</p>
-        <p>{experience.responsibilities || "Your responsibilities"}</p>
-        <p>
-          {experience.dateFrom || "Start date"} -{" "}
-          {experience.dateUntil || "End date"}
-        </p>
-      </div>
 
       {isSubmitted && (
         <button type="button" onClick={() => setIsSubmitted(false)}>
